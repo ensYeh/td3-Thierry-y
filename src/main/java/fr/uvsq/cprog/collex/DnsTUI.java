@@ -1,7 +1,5 @@
 package fr.uvsq.cprog.collex;
 
-package fr.uvsq.cprog;
-
 import java.io.Closeable;
 import java.util.Scanner;
 
@@ -62,9 +60,9 @@ public final class DnsTUI implements Closeable {
       if (parts.length == 1) {
         String input = parts[0];
         if (Character.isDigit(input.charAt(0))) {
-          return new GetCommand(new AdresseIP(input));
+          return new GetNameCommand(new AdresseIP(input));
         } else {
-          return new GetCommand(new NomMachine(input));
+          return new GetIpCommand(new NomMachine(input));
         }
       }
 
