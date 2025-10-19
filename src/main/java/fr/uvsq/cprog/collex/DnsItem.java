@@ -19,5 +19,9 @@ public final class DnsItem {
   public AdresseIP getIp() {
     return this.ip;
   }
+
+  public String formatForFile() {
+    return this.nom.getValeur() + " " + this.ip.getValeur();
+  }
   
 }

@@ -18,4 +18,21 @@ public final class AdresseIP {
     return this.valeur;
   }
 
+  @Override
+  public boolean equals(final Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    final AdresseIP adresseIP = (AdresseIP) o;
+    return Objects.equals(this.valeur, adresseIP.valeur);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(this.valeur);
+  }
+
 }

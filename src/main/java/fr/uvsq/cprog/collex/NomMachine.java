@@ -19,4 +19,30 @@ public final class NomMachine {
     return this.valeur;
   }
 
+  @Override
+  public boolean equals(final Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    final NomMachine that = (NomMachine) o;
+    return Objects.equals(this.valeur, that.valeur);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(this.valeur);
+  }
+
+  public String getDomaine() {
+    int indexPremierPoint = this.valeur.indexOf('.');
+    return this.valeur.substring(indexPremierPoint + 1);
+  }
+
+  public boolean belongsToDomaine(final String domaine) {
+    return this.getDomaine().equals(domaine);
+  }
+
 }
