@@ -24,6 +24,10 @@ public final class DnsItem {
     return this.nom.getValeur() + " " + this.ip.getValeur();
   }
 
+  public String formatForLs() {
+    return this.nom.getValeur() + " -> " + this.ip.getValeur();
+  }
+
   @Override
   public boolean equals(final Object o) {
     if (this == o) {

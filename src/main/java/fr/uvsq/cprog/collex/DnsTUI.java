@@ -75,7 +75,7 @@ public final class DnsTUI implements Closeable {
 
   @Override
   public void close() {
-    this.scanner.close();
+    // this.scanner.close();
   }
 
 }
